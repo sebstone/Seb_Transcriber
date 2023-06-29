@@ -1,6 +1,6 @@
 package Program.Script.TirSu.TirSuSymbol;
 
-import Program.Script.I_Alphabet;
+import Program.Script.Alphabet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,8 +8,7 @@ import java.util.List;
 /**
  * TirSu_Alphabet
  */
-public enum TirSu_Alphabet implements I_Alphabet
-{
+public enum TirSu_Alphabet implements Alphabet {
 
     A("a", Letter_Element.HEAD_ROOF, Letter_Element.CENTER_LINE_LONG, Letter_Element.NECK_HIGH_LONG),
     B("b", Letter_Element.HEAD_ROOF_INVERTED, Letter_Element.CENTER_LINE_LONG, Letter_Element.T_ARM_HIGH, Letter_Element.NECK_HIGH_Short),
@@ -41,30 +40,26 @@ public enum TirSu_Alphabet implements I_Alphabet
     CH("ch", "-ch-", Letter_Element.HEAD_ROOF, Letter_Element.HEAD_ELLIPSE_MID, Letter_Element.CENTER_LINE_MID, Letter_Element.T_ARM_LOW),
     EA("ea", "-ea-", Letter_Element.HEAD_T, Letter_Element.HEAD_ROOF, Letter_Element.NECK_HIGH_LONG, Letter_Element.CENTER_LINE_LONG),
     OA("oa", "-oa-", Letter_Element.HEAD_ELLIPSE_HIGH, Letter_Element.NECK_HIGH_Short, Letter_Element.ARM_RIGHT_HIGH, Letter_Element.ARM_LEFT_HIGH, Letter_Element.CENTER_LINE_LONG),
-    OI("oi", "-oi-", Letter_Element.HEAD_ROOF_INVERTED, Letter_Element.HEAD_ELLIPSE_MID , Letter_Element.CENTER_LINE_MID),
+    OI("oi", "-oi-", Letter_Element.HEAD_ROOF_INVERTED, Letter_Element.HEAD_ELLIPSE_MID, Letter_Element.CENTER_LINE_MID),
     OU("ou", "-ou-", Letter_Element.HEAD_U_Mid, Letter_Element.HEAD_ELLIPSE_HIGH, Letter_Element.CENTER_LINE_MID),
     SH("sh", "-sh-", Letter_Element.HEAD_ROOF, Letter_Element.HEAD_ELLIPSE_MID, Letter_Element.ARM_RIGHT_MID, Letter_Element.CENTER_LINE_MID),
     TH("th", "-th-", Letter_Element.HEAD_ROOF, Letter_Element.HEAD_ELLIPSE_MID, Letter_Element.ARM_RIGHT_LOW, Letter_Element.ARM_RIGHT_MID, Letter_Element.CENTER_LINE_MID),
     ZH("zh", "-zh-", Letter_Element.HEAD_RIGHT_OPEN_SQUARE_HIGH, Letter_Element.NECK_HIGH_Short, Letter_Element.T_ARM_HIGH, Letter_Element.T_ARM_MID, Letter_Element.CENTER_LINE_LONG);
 
     // Constructor ---------------------------------------------------------------- \\
-    private TirSu_Alphabet(String pLetter, Letter_Element... pElements)
-    {
+    private TirSu_Alphabet(String pLetter, Letter_Element... pElements) {
         this._Letter = pLetter;
         this._ReplacementSymbol = pLetter;
-        for (Letter_Element letter_Element : pElements)
-        {
+        for (Letter_Element letter_Element : pElements) {
             this._Elements.add(letter_Element);
         }
 
     }
 
-    private TirSu_Alphabet(String pLetter, String pReplacementSymbol, Letter_Element... pElements)
-    {
+    private TirSu_Alphabet(String pLetter, String pReplacementSymbol, Letter_Element... pElements) {
         this._Letter = pLetter;
         this._ReplacementSymbol = pReplacementSymbol;
-        for (Letter_Element letter_Element : pElements)
-        {
+        for (Letter_Element letter_Element : pElements) {
             this._Elements.add(letter_Element);
         }
     }
@@ -86,8 +81,7 @@ public enum TirSu_Alphabet implements I_Alphabet
         return _ReplacementSymbol;
     }
 
-    public List<Letter_Element> get_Elements()
-    {
+    public List<Letter_Element> get_Elements() {
         return _Elements;
     }
 }

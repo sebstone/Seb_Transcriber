@@ -1,6 +1,6 @@
 package Program.Script;
 
-public interface I_Alphabet
+public interface Alphabet
 {
     String letter = "";
     String replacementString = "";

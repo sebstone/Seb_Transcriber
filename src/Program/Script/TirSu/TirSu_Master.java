@@ -1,11 +1,10 @@
 package Program.Script.TirSu;
 
-import Program.Script.I_Script;
+import Program.Script.Script;
 import Program.Script.TirSu.TirSuSymbol.TirSu_Alphabet;
 import elements.Group_Element;
 
-public class TirSu_Master implements I_Script
-{
+public class TirSu_Master implements Script {
     @Override
     public String transcribeInput(String pInput) {
         String transcribedString = "";
